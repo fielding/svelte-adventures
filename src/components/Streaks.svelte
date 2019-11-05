@@ -6,16 +6,20 @@ import response from '../data/streaksData.js';
 <AccountScreen swipeable>
 	<h2 slot="title" class="title">Streaks</h2>
 	<div>
-		<img class="avatar" alt="Special Triage Nicholas" src="https://i.imgur.com/v47Gy36.png" />
+		<img alt="Special Triage Nicholas" src="https://i.imgur.com/Do459v1.png" />
 	</div>
 </AccountScreen>
 
 <style>
 	div {
-		height: 60%;
+		height: 70%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	img {
+		width: 75%;
 	}
 
 	.title {
@@ -27,15 +31,6 @@ import response from '../data/streaksData.js';
     margin-bottom: 1em;
 	}
 
-	.avatar {
-		border-radius: 50%;
-		border: .375em solid #ffffff;
-		background-color: #ffffff;
-		height: 14.375em; /* 230px at 16px font-size */
-		width: 14.375em;
-		margin-top: -3em; /* -48px @ 16px font-size */
-		border: .375em solid #ffffff; /* 6px solid $white @ 16px font-size */
-		background-color: #ffffff;
-	}
+
 
 </style>
