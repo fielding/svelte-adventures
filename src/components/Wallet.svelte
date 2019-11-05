@@ -1,0 +1,29 @@
+<script>
+ import AccountScreen from './AccountScreen.svelte';
+ import Balance from './Balance.svelte';
+</script>
+
+<AccountScreen swipeable>
+	<h2 slot="title" class="title">Wallet</h2>
+	<div>
+		<img alt="$$ Vidy TV $$"src="https://i.imgur.com/CqUfJMN.png" />
+	</div>
+</AccountScreen>
+
+<style>
+	div {
+		height: 580px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.title {
+		font-weight: 500;
+    font-size: 1.125em; /* 18px with parent font-size 16px */
+    color: #ffffff;
+    text-transform: initial;
+    margin-top: 1em; /* same as this elements font-size */
+    margin-bottom: 1em;
+	}
+</style>
