@@ -1,0 +1,21 @@
+{
+	"plugins": ["react", "prettier", "jest"],
+	"extends": [
+		".eslintrc",
+		"plugin:prettier/recommended",
+		"eslint:recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:react/recommended"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"warn",
+			{
+				"singleQuote": true,
+				"trailingComma": "es5",
+				"printWidth": 80
+			}
+		]
+	}
+}

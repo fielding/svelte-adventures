@@ -2,24 +2,19 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "devDependencies": {
-    "eslint": "6.6.0",
-    "eslint-config-es2015": "1.1.0",
-    "eslint-config-prettier": "5.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "3.1.0",
-    "prettier": "1.18.2",
     "rollup": "^1.12.0",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.24.3",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "3.2.2"
+    "svelte-preprocess": "^3.2.2",
+    "typescript": "^3.6.4"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4",
-    "stylus": "^0.54.7"
+    "sirv-cli": "^0.4.4"
   },
   "scripts": {
     "build": "rollup -c",

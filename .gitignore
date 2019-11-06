@@ -1,0 +1,12 @@
+coverage
+node_modules
+*-lock.json
+.DS_Store
+*.lock
+*.log
+
+.eslintcache
+/dist
+.idea
+
+classnames.json
