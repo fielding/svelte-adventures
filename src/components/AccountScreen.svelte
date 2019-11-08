@@ -15,6 +15,7 @@ export let swipeable = false;
 		min-width: 100%;
 		text-align: center;
 		position: absolute;
+		height:100%;
 		/* background-color: #000000; */
 	}
 
