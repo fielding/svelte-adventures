@@ -1,5 +1,5 @@
 <script>
-import AccountScreen from './AccountScreen.svelte';
+import AccountScreen from './Screen.svelte';
 import response from '../data/streaksData.js';
 </script>
 

@@ -1,10 +1,10 @@
 <script lang='ts'>
 	import { onMount, beforeUpdate } from 'svelte';
-	import { smoothHorizontalScroll } from '../utils/dom.ts';
-	import { mainScreen, mainClientWidth, mainTarget} from '../stores/account-context.js';
-	import Profile from './Profile.svelte';
-	import Streaks from './Streaks.svelte';
-	import Wallet from './Wallet.svelte';
+	import { smoothHorizontalScroll } from '../../utils/dom.ts';
+	import { mainScreen, mainClientWidth, mainTarget} from './account-store.js';
+	import Profile from '../Profile.svelte';
+	import Streaks from '../Streaks.svelte';
+	import Wallet from '../Wallet.svelte';
 
 	let main;
 
@@ -29,8 +29,8 @@
 		main.style.scrollBehavior = 'auto';
 		main.scrollLeft = scrollIndex.indexOf($mainScreen) * $mainClientWidth;
 		main.scrollTop = 0;
-		main.removeAttribute('style');
-	})
+		main.removeAttribute('style')
+	});
 
 	beforeUpdate(() => {
 		if ($mainTarget) {
@@ -64,7 +64,7 @@
 		position: absolute;
 		max-width: 374px;
 		width: 100%;
-		height: 100%;
+		height: calc(100% - 2.375em);
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-y: hidden;

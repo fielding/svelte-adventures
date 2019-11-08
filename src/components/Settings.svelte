@@ -1,5 +1,5 @@
 <script>
-	import AccountScreen from './AccountScreen.svelte';
+	import AccountScreen from './Screen.svelte';
 </script>
 
 <AccountScreen>

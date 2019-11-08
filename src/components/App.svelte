@@ -1,5 +1,5 @@
 <script>
-	import Account from './Account.svelte';
+	import Account from './Account/Account.svelte';
 </script>
 
 <Account/>

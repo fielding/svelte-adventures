@@ -1,5 +1,5 @@
 <script>
-	import AccountScreen from './AccountScreen.svelte';
+	import AccountScreen from './Screen.svelte';
 	import Balance from './Balance.svelte';
 	import PromoCards from './PromoCards.svelte';
 </script>
@@ -25,7 +25,7 @@
 		right: 0;
 		margin: 4.5em 1.1875em 0 1.1875em; /* 72px auto 0 auto @ font-size 16px */
 	}
-	
+
 	.avatar {
 		border-radius: 50%;
 		border: .375em solid #ffffff;
@@ -36,7 +36,7 @@
 		border: .375em solid #ffffff; /* 6px solid $white @ 16px font-size */
 		background-color: #ffffff;
 	}
-	
+
 	.title {
 		font-weight: 500;
     font-size: 1.125em; /* 18px with parent font-size 16px */
