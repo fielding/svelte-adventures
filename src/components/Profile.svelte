@@ -1,6 +1,7 @@
 <script>
 	import AccountScreen from './Screen.svelte';
 	import Balance from './Balance.svelte';
+	import Change from './Change.svelte';
 	import PromoCards from './PromoCards.svelte';
 </script>
 
@@ -9,6 +10,7 @@
 	<div class="card">
 		<img class="avatar" alt="User's Avatar" src="https://static.vidy.com/users/avatar.png" >
 		<Balance />
+		<Change />
 	</div>
 	<PromoCards />
 </AccountScreen>
