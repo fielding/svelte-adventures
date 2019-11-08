@@ -1,9 +1,31 @@
 <script>
 	import { stackedScreen } from '../stores/account-context.js';
+	import { onMount, onDestroy } from 'svelte';
+	import { iOS } from '../constants/device.ts';
+	import { lockActionBar, lockScroll, disableDoubleTap } from '../utils/safarcical.js';
 	import AccountMain from './AccountMain.svelte';
 	import AccountNav from './AccountNav.svelte';
 
 
+
+	let account;
+
+	onMount(() => {
+		if (iOS) {
+			lockActionBar();
+			lockScroll(account, { tolerance: 4 });
+		}
+
+		disableDoubleTap()
+	})
+
+	onDestroy(() => {
+		if (iOS) {
+			unlockActionBar();
+			unlockScroll(account);
+		}
+		enableDoubleTap();
+	})
 </script>
 
 <div class="account" bind:this={account}>
