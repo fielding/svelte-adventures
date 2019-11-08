@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { smoothHorizontalScroll } from '../utils/dom.ts';
 	import { TOUCHES } from '../constants/device.ts';
 	import PromoCard from './PromoCard.svelte';
 	import promoInfo from '../data/promoCards.js';
@@ -12,7 +13,7 @@
 		if ('scrollBehavior' in document.documentElement.style) {
 			requestAnimationFrame(() => cards.scrollTo({ left: cards.children[index].offsetLeft, top: 0, behavior: 'smooth' }));
 		} else {
-			dom.smoothHorizontalScroll(cards, cards.children[index].offsetLeft);
+			smoothHorizontalScroll(cards, cards.children[index].offsetLeft);
 		}
 	}
 
