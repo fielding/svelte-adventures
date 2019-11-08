@@ -6,9 +6,9 @@
 </script>
 
 <AccountScreen swipeable>
-	<h2 slot="title" class="title">@username</h2>
+	<h2 slot="title" class="title">@fielding</h2>
 	<div class="card">
-		<img class="avatar" alt="User's Avatar" src="https://static.vidy.com/users/avatar.png" >
+		<img class="avatar" alt="User's Avatar" src="https://i.imgur.com/OjaHwMY.png" >
 		<Balance />
 		<Change />
 	</div>
