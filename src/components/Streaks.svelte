@@ -1,6 +1,6 @@
 <script>
 import AccountScreen from './Screen.svelte';
-import response from '../data/streaksData.js';
+import response from '../data/streaks.js';
 </script>
 
 <AccountScreen swipeable>
