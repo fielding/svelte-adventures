@@ -1,13 +1,13 @@
 <script>
-	import { stackedScreen, mainScreen } from '../stores/account-context.js';
+	import { stackedScreen } from '../stores/account-context.js';
 	import AccountMain from './AccountMain.svelte';
 	import AccountNav from './AccountNav.svelte';
 
-	$: currentScreen = $stackedScreen ? $stackedScreen : AccountMain;
+
 </script>
 
-<div class="account">
-	<svelte:component this={currentScreen} />
+<div class="account" bind:this={account}>
+	<svelte:component this={$stackedScreen || AccountMain} />
 	<AccountNav />
 </div>
 

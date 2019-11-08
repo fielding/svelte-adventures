@@ -1,32 +1,59 @@
-<script>
+<script lang='ts'>
 	import { onMount, beforeUpdate } from 'svelte';
-	import { mainScreen } from '../stores/account-context.js';
+	import { smoothHorizontalScroll } from '../utils/dom.ts';
+	import { mainScreen, mainClientWidth, mainTarget} from '../stores/account-context.js';
 	import Profile from './Profile.svelte';
 	import Streaks from './Streaks.svelte';
 	import Wallet from './Wallet.svelte';
 
 	let main;
 
-	const scrollIndex = {
-		'Wallet': 0,
-		'Profile': 1,
-		'Streaks': 2,
+	const scrollIndex = [
+		'Wallet',
+		'Profile',
+		'Streaks',
+	]
+
+	const handleScroll = e => {
+		if ($mainTarget === null) {
+			$mainScreen = scrollIndex[Math.round(e.target.scrollLeft / $mainClientWidth)];
+		}
+
+		if (scrollIndex.indexOf($mainTarget) === Math.round(e.target.scrollLeft / $mainClientWidth)) {
+			$mainScreen = $mainTarget;
+			$mainTarget = null
+		}
 	};
 
 	onMount(() => {
 		main.style.scrollBehavior = 'auto';
-		main.scrollLeft = scrollIndex[$mainScreen] * main.clientWidth;
+		main.scrollLeft = scrollIndex.indexOf($mainScreen) * $mainClientWidth;
 		main.scrollTop = 0;
 		main.removeAttribute('style');
 	})
 
 	beforeUpdate(() => {
-		main && (main.scrollLeft = scrollIndex[$mainScreen] * main.clientWidth);
+		if ($mainTarget) {
+			if ('scrollBehavior' in document.documentElement.style) {
+				main?.scrollTo(scrollIndex.indexOf($mainTarget) * $mainClientWidth, 0);
+			} else {
+				main && smoothHorizontalScroll(main, scrollIndex.indexOf($mainTarget) * $mainClientWidth);
+			}
+		}
 	});
 
+	// not sure if this would be preferred over the above (beforeUpdate() implementation);
+	// $: if ($mainTarget) {
+	// 		if ('scrollBehavior' in document.documentElement.style) {
+	// 			main?.scrollTo(scrollIndex.indexOf($mainTarget) * $mainClientWidth, 0);
+	// 			// main?.scrollLeft = (scrollIndex.indexOf($mainTarget) * $mainClientWidth);
+	// 		} else {
+	// 			smoothHorizontalScroll(main, scrollIndex.indexOf($mainTarget) * $mainClientWidth);
+	// 		}
+	// }
 </script>
 
-<div class="main" bind:this={main}>
+<div class="main" bind:clientWidth={$mainClientWidth} bind:this={main} on:scroll={handleScroll}>
 		<Wallet/>
 		<Profile/>
 		<Streaks/>
