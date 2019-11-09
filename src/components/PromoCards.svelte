@@ -47,11 +47,11 @@
 		cards.insertBefore(lastCardClone, cards.firstChild);
 
 		cards.scrollLeft = cards.children[1].offsetLeft;
-		current = 1
+		current = 1;
 
 		let intervalId = setInterval(next, 5000);
 
-		if (TOUCHES) {
+		if (!TOUCHES) {
 				// tmp = dom.create('button');
 				// tmp.className = styles['acc__profile__promos__prev'];
 				// tmp.onclick = e => {
