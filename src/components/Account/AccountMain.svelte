@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { onMount, beforeUpdate } from 'svelte';
+	import { onMount, beforeUpdate, tick } from 'svelte';
 	import { smoothHorizontalScroll } from '../../utils/dom.ts';
 	import { mainScreen, mainClientWidth, mainTarget} from './account-store.js';
 	import Profile from '../Profile.svelte';
@@ -25,10 +25,11 @@
 		}
 	};
 
-	onMount(() => {
+	onMount(async () => {
 		main.style.scrollBehavior = 'auto';
 		main.scrollLeft = scrollIndex.indexOf($mainScreen) * $mainClientWidth;
-		main.scrollTop = 0;
+		main.scrollTop = 0;s
+		await tick();
 		main.removeAttribute('style')
 	});
 
