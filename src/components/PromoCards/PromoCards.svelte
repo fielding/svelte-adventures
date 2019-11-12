@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
-	import { smoothHorizontalScroll } from '../utils/dom.ts';
-	import { TOUCHES } from '../constants/device.ts';
+	import { smoothHorizontalScroll } from '../../utils/dom.ts';
+	import { TOUCHES } from '../../constants/device.ts';
 	import PromoCard from './PromoCard.svelte';
-	import promoInfo from '../data/promoCards.js';
+	import promoInfo from '../../data/promoCards.js';
 
 	let cards;
 	let current;

@@ -2,7 +2,7 @@
 	import AccountScreen from './Screen.svelte';
 	import Balance from './Balance.svelte';
 	import Change from './Change.svelte';
-	import PromoCards from './PromoCards.svelte';
+	import PromoCards from './PromoCards/PromoCards.svelte';
 </script>
 
 <AccountScreen swipeable>
