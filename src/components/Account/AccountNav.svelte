@@ -1,7 +1,7 @@
 <script>
 	import { beforeUpdate, onMount } from 'svelte';
 	import { mainScreen, mainTarget, stackedScreen, currentScreen, navigate } from './account-store.js';
-	import Settings from '../Settings.svelte';
+	import Settings from '../Settings/Settings.svelte';
 	import Rewards from '../Rewards.svelte';
 
 	$: wallet = $mainScreen === 'Wallet';
