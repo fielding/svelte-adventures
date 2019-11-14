@@ -1,11 +1,12 @@
 import svelte from 'rollup-plugin-svelte';
+import alias from '@rollup/plugin-alias';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import ts from 'rollup-plugin-typescript2';
 import rollup_start_dev from './rollup_start_dev';
-
+import path from 'path';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
@@ -17,6 +18,15 @@ export default {
 		file: 'public/bundle.js',
 	},
 	plugins: [
+		alias({
+			resolve: ['.svelte','.ts','.js'],
+			entries: [
+					{
+						find:'~',
+						replacement: path.resolve(__dirname, 'src'),
+					},
+			],
+		}),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,

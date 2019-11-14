@@ -1,5 +1,5 @@
 <script>
-	import AccountScreen from './Screen.svelte';
+	import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
 </script>
 
 <AccountScreen swipeable>

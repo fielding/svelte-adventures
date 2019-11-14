@@ -1,7 +1,7 @@
 <script>
-	import AccountScreen from '../Screen.svelte';
-	import Balance from '../Balance.svelte';
-	import Change from '../Change.svelte';
+	import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
+	import Balance from '~/views/Balance/Balance.svelte';
+	import Change from '~/views/Change/Change.svelte';
 </script>
 
 <AccountScreen swipeable>
@@ -23,9 +23,8 @@
 		<a class="banner" href="https://github.com/lukeed/polka" style="text-decoration: none;">
 			<h2>Ladies...  </h2>
 			<p>my web server so fast, <br /> it'll make you dance!</p>
-			<!-- <span class="index">1/254</span> -->
 		</a>
 	</div>
 </AccountScreen>
 
-<style src="./Settings.scss"></style>
+<style lang="scss" src="./style.scss"></style>

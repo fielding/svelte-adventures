@@ -1,8 +1,8 @@
 <script>
-	import AccountScreen from './Screen.svelte';
-	import Balance from './Balance.svelte';
-	import Change from './Change.svelte';
-	import PromoCards from './PromoCards/PromoCards.svelte';
+	import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
+	import Balance from '~/views/Balance/Balance.svelte';
+	import Change from '~/views/Change/Change.svelte';
+	import PromoCards from '~/views/PromoCards/PromoCards.svelte';
 </script>
 
 <AccountScreen swipeable>

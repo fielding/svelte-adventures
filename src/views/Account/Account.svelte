@@ -1,12 +1,10 @@
 <script>
-	import { stackedScreen } from './account-store.js';
+	import { stackedScreen } from './store.js';
 	import { onMount, onDestroy } from 'svelte';
-	import { iOS } from '../../constants/device.ts';
-	import { lockActionBar, lockScroll, disableDoubleTap } from '../../utils/safarcical.js';
-	import AccountMain from './AccountMain.svelte';
-	import AccountNav from './AccountNav.svelte';
-
-
+	import { iOS } from '~/constants/device.ts';
+	import { lockActionBar, lockScroll, disableDoubleTap } from '~/utils/safarcical.js';
+	import AccountMain from './AccountMain/AccountMain.svelte';
+	import AccountNav from './AccountNav/AccountNav.svelte';
 
 	let account;
 

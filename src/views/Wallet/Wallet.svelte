@@ -1,6 +1,6 @@
 <script>
- import AccountScreen from './Screen.svelte';
- import Balance from './Balance.svelte';
+ import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
+ import Balance from '~/views/Balance/Balance.svelte';
 </script>
 
 <AccountScreen swipeable>
