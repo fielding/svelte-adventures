@@ -95,7 +95,7 @@
 <div class="promoCards">
 	<div class="cards" bind:this={cards} on:scroll={handleScroll} >
 		{#each promoInfo as {name, title, body, screen}, index}
-			<PromoCard {title} {body} {index} total={promoInfo.length} />
+			<PromoCard {title} {body} {index} {screen} total={promoInfo.length} />
 		{/each}
 	</div>
 	{#if !TOUCHES}
