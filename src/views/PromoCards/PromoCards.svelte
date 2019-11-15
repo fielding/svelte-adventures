@@ -7,7 +7,6 @@
 	import { current } from './store.js';
 
 	let cards;
-	// let current;
 	let intervalId;
 	let promoScrollTimeout;
 
@@ -90,7 +89,6 @@
 	onDestroy(() => {
 		clearInterval(intervalId);
 		clearTimeout(promoScrollTimeout);
-		$previouslyViewed = current;
 	});
 </script>
 
