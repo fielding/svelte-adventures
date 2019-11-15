@@ -1,4 +1,10 @@
-.promos {
+
+.promoCards {
+	display: flex;
+	position: relative;
+}
+
+.cards {
 	max-width: 21em;
 	position: relative;
 	margin: .625em 1.1875em 0 1.1875em; /* 10px 19px 0 19px @ font-size 16 */
@@ -11,4 +17,41 @@
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+}
+
+button {
+	position: absolute;
+	z-index: 1;
+	width: 2em;
+	height: 5.375em;
+	margin-top: 0.625em;
+	font-size: 1em;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		svg {
+			transform: scale(1.666);
+		}
+	}
+
+	svg {
+		fill: #FFFFFF;
+		height: .75em;
+		width: .75em;
+		transition: transform .5s cubic-bezier(.165, .84, .44, 1);
+	}
+}
+
+.prev {
+	left: 1.1875em;
+}
+
+.next {
+	right: 1.1875em;
 }
