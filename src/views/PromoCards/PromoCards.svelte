@@ -4,10 +4,10 @@
 	import { iOS, TOUCHES } from '../../constants/device.ts';
 	import PromoCard from './PromoCard.svelte';
 	import promoInfo from './data.js';
-	import { previouslyViewed } from './store.js';
+	import { current } from './store.js';
 
 	let cards;
-	let current;
+	// let current;
 	let intervalId;
 	let promoScrollTimeout;
 
@@ -30,13 +30,13 @@
 	const prev = () => {
 		if (!document.hidden) {
 			intervalId = clearInterval(intervalId);
-			if (current === 0) {
+			if ($current === 0) {
 				cards.scrollLeft = cards.children[promoInfo.length].offsetLeft;
-				current = promoInfo.length - 1;
+				$current = promoInfo.length - 1;
 			} else {
-				current -= 1;
+				$current -= 1;
 			}
-			scrollToPromo(current);
+			scrollToPromo($current);
 			intervalId = setInterval(next, 5000);
 		}
 	};
@@ -44,13 +44,13 @@
 	const next = () => {
 		if (!document.hidden) {
 			intervalId = clearInterval(intervalId);
-			if (current === promoInfo.length + 1) {
+			if ($current === promoInfo.length + 1) {
 				cards.scrollLeft = cards.children[1].offsetLeft;
-				current = 2;
+				$current = 2;
 			} else {
-				current += 1;
+				$current += 1;
 			}
-			scrollToPromo(current);
+			scrollToPromo($current);
 			intervalId = setInterval(next, 5000);
 		}
 	};
@@ -73,7 +73,7 @@
 		// update state after manual scrolling
 		promoScrollTimeout = setTimeout(() => {
 			if (!intervalId) intervalId = setInterval(next, 5000);
-			current = Math.floor(cards.scrollLeft / cards.clientWidth);
+			$current = Math.floor(cards.scrollLeft / cards.clientWidth);
 		}, 66);
 	}
 
@@ -82,8 +82,7 @@
 		cards.appendChild(cards.firstChild.cloneNode(true));
 		cards.insertBefore(lastCardClone, cards.firstChild);
 
-		current = $previouslyViewed;
-		scrollToPromo(current, 'auto');
+		scrollToPromo($current, 'auto');
 
 		intervalId = setInterval(next, 5000);
 	});

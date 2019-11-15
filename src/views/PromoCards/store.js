@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const previouslyViewed = writable(1);
+export const current = writable(1);
