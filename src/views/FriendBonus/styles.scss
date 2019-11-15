@@ -1,0 +1,73 @@
+.acc__frendBonus {
+	position: absolute;
+	max-width: 374px;
+	min-width: 100%;
+	color: #fff;
+}
+.acc__frendBonus span {
+	font-weight: 600;
+}
+.acc__frendBonus .card {
+	background-color: #313131;
+	border-radius: 0.5em;
+	margin: 1em;
+	padding: 1.1255em 1.125em 0.75em 1em;
+}
+.acc__frendBonus .card p {
+	font-size: 0.875em;
+	text-align: left;
+}
+.acc__frendBonus .card button {
+	background-color: #959595;
+	font-size: 0.75em;
+	font-weight: 500;
+	height: 2.5em;
+	padding: 0.75em 1.5em;
+	text-transform: unset;
+	border-radius: 0.5em;
+	white-space: nowrap;
+	line-height: 1.3;
+}
+.acc__frendBonus .row {
+	display: flex;
+	justify-content: space-between;
+}
+.acc__frendBonus .row span {
+	padding: 0.75em 0 1.125em 0;
+}
+.acc__frendBonus .shapes {
+	margin: 3em auto 1.875em;
+	width: 17.625em;
+	height: 7.9375em;
+}
+.acc__frendBonus h3 {
+	font-size: 1.5625em;
+	margin-bottom: 0.32em;
+	padding-top: 1.44em;
+	font-weight: 600;
+}
+.acc__frendBonus h4 {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.acc__frendBonus__totalEarned {
+	background-color: #ff3dac;
+	border-radius: 2em;
+	height: 2em;
+	width: 17em;
+	margin: auto;
+	align-items: center;
+	padding: 0 1.125em 0 1.5em;
+}
+.acc__frendBonus__totalEarned.row span {
+	padding: unset;
+}
+.acc__frendBonus svg.avatar {
+	border: 1px dashed rgba(255, 255, 255, 0.4);
+	border-radius: 50%;
+}
+.acc__frendBonus .avatar {
+	height: 2.625em;
+	width: 2.625em;
+}

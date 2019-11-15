@@ -1,9 +1,11 @@
+import FriendBonus from '~/views/FriendBonus/FriendBonus.svelte';
+
 const promoInfo = [
 	{
 		name: 'promo__friend_bonus',
 		title: '2x Friend Bonus',
 		body: 'Get a 5x bonus every time you and your friend watch the same Vidy',
-		screen: 'FriendBonus',
+		screen: FriendBonus,
 	},
 	{
 		name: 'promo__lottery',
