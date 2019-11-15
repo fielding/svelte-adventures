@@ -1,0 +1,20 @@
+	.main {
+		position: absolute;
+		max-width: 374px;
+		width: 100%;
+		height: calc(100% - 2.375em);
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		-ms-scroll-snap-type: x mandatory;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		scrollbar-width: none; /* Firefox hide scrollbars */
+		-ms-overflow-style: none; /* IE 10+ hide scrollbars */
+	}
+
+	.main::-webkit-scrollbar {
+		display: none;
+	}

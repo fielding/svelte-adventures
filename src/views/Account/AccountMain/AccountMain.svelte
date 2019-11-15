@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script>
 	import { onMount, beforeUpdate, tick } from 'svelte';
 	import { smoothHorizontalScroll } from '~/utils/dom.ts';
 	import { mainScreen, mainClientWidth, mainTarget} from '~/views/Account/store.js';
@@ -30,15 +30,15 @@
 		main.scrollLeft = scrollIndex.indexOf($mainScreen) * $mainClientWidth;
 		main.scrollTop = 0;
 		await tick();
-		main.removeAttribute('style')
+		main.removeAttribute('style');
 	});
 
 	beforeUpdate(() => {
-		if ($mainTarget) {
+		if ($mainTarget && main) {
 			if ('scrollBehavior' in document.documentElement.style) {
-				main?.scrollTo(scrollIndex.indexOf($mainTarget) * $mainClientWidth, 0);
+				main.scrollTo(scrollIndex.indexOf($mainTarget) * $mainClientWidth, 0);
 			} else {
-				main && smoothHorizontalScroll(main, scrollIndex.indexOf($mainTarget) * $mainClientWidth);
+				smoothHorizontalScroll(main, scrollIndex.indexOf($mainTarget) * $mainClientWidth);
 			}
 		}
 	});
@@ -60,25 +60,4 @@
 		<Streaks/>
 </div>
 
-<style>
-	.main {
-		position: absolute;
-		max-width: 374px;
-		width: 100%;
-		height: calc(100% - 2.375em);
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-y: hidden;
-		overflow-x: scroll;
-		-webkit-overflow-scrolling: touch;
-		-ms-scroll-snap-type: x mandatory;
-		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
-		scrollbar-width: none; /* Firefox hide scrollbars */
-		-ms-overflow-style: none /* IE 10+ hide scrollbars */
-	}
-
-	.main::-webkit-scrollbar {
-		display: none;
-	}
-</style>
+<style lang="scss" src="./styles.scss"></style>
