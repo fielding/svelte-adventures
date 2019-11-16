@@ -1,73 +1,89 @@
-.acc__frendBonus {
-	position: absolute;
-	max-width: 374px;
-	min-width: 100%;
+// TODO:
+// 	1. Replace/Extract raw datauri used for `.shapes` background
+span {
 	color: #fff;
-}
-.acc__frendBonus span {
 	font-weight: 600;
 }
-.acc__frendBonus .card {
+.card {
 	background-color: #313131;
 	border-radius: 0.5em;
+	color: #ffffff;
 	margin: 1em;
 	padding: 1.1255em 1.125em 0.75em 1em;
 }
-.acc__frendBonus .card p {
+.card p {
 	font-size: 0.875em;
 	text-align: left;
 }
-.acc__frendBonus .card button {
+.card button {
 	background-color: #959595;
+	border: none;
+	border-radius: 0.5em;
+	color: #ffffff;
+	font-family: inherit;
 	font-size: 0.75em;
 	font-weight: 500;
 	height: 2.5em;
+	line-height: 1.3;
+	margin: 1em auto; // 16px auto @ font-size 16px
 	padding: 0.75em 1.5em;
 	text-transform: unset;
-	border-radius: 0.5em;
 	white-space: nowrap;
-	line-height: 1.3;
 }
-.acc__frendBonus .row {
+.row {
 	display: flex;
 	justify-content: space-between;
 }
-.acc__frendBonus .row span {
+.row span {
 	padding: 0.75em 0 1.125em 0;
 }
-.acc__frendBonus .shapes {
+.shapes {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARoAAAB/CAMAAAAHI/3VAAAA6lBMVEUAAAD////////////////////////////////////Pz8/Dw8PExMTExMTExMTHx8fHx8fFxcX///+/v7/////////////////FxcXFxcX////////////////ExMTDw8O/v7/CwsJYt6dZuqZauqVZuaVZuaVZuaVYuKZXuKVYt59YuKRIl/dAj+9ElPRFlfNElfNAn/9FlfNFlvNGlvREk/NFlfNClfJFlvJAj+9FlfJElvJAle9El/NElvFHlPVDlvTzv0T1wkP1wUL1wULzv0D0wUH0wkL2wkL1wEL3wkH2wUL3wkX0wULqqpH4AAAATnRSTlMAQJ+A/3Agv+/fEIC//89fIN8QEDBPb49gfz9fr89f3yBgIL/v/6/vv68gvyAQcO9/EJD/30C/YN8gn48wf3BPX0Cv7/9AkI+vrz+PP+8t7l/BAAABeklEQVR4AezTgwEFYQwD4JzZ/2zvP+SzbfbboE2CnyfJOIgpqqphH9MNVVVNHbuYZKlTBl7Bdlwi4X3LmBYkPJ8f0Ezgf8eYFqwQTxfQQhDh48VJKhumOpXh2XJaKfAlwrLK6kbCkwlacbGJ0QZchF/DXFoR2MQKWmmxiUUdLXTYxvrFb7oeu9ggiNwiwpi9ujBsBIYBKKpVAmVu+LBh2n+eMNvHfH1vhG9LAgDgr1cslc/Oi5GgWD5buEjbcH62cqlE4mztQolE+WxNiUTpbOVKicR1+WyhfB0krs/PyjfKAAAAAAAAAADAl93eBVn3D49BxtNzpVINUrfVykItUoapslRXItFoViq+TV7rTWXpbZB6t/w4D+531vtFG/c7r9WsPAR5H5ofg7zWSwD/NQAAAAAAAAAAAADanW6v2+kLkRj01oaRUEabrHZv72imGPX2xnGAbm+vGwfoHYqfxq+xa1yoSRxi2tuaRkobZfLm8/H0dfH1RMpNAMIARaxQxcDdAAAAAElFTkSuQmCC);
+	background-repeat: no-repeat;
+	height: 7.9375em;
 	margin: 3em auto 1.875em;
 	width: 17.625em;
-	height: 7.9375em;
 }
-.acc__frendBonus h3 {
+
+h2 {
+	color: #ffffff;
+	font-size: 1.125em; /* 18px with parent font-size 16px */
+	font-weight: 500;
+	margin-bottom: 1em;
+	margin-top: 1em; /* same as this elements font-size */
+	text-transform: initial;
+}
+
+h3 {
+	color: #ffffff;
 	font-size: 1.5625em;
+	font-weight: 600;
 	margin-bottom: 0.32em;
 	padding-top: 1.44em;
-	font-weight: 600;
 }
-.acc__frendBonus h4 {
+h4 {
 	margin: 0;
 	padding: 0;
 	text-align: left;
 }
-.acc__frendBonus__totalEarned {
+.totalEarned {
+	align-items: center;
 	background-color: #ff3dac;
 	border-radius: 2em;
 	height: 2em;
-	width: 17em;
 	margin: auto;
-	align-items: center;
 	padding: 0 1.125em 0 1.5em;
+	width: 17em;
 }
-.acc__frendBonus__totalEarned.row span {
+.totalEarned.row span {
 	padding: unset;
 }
-.acc__frendBonus svg.avatar {
+svg.avatar {
 	border: 1px dashed rgba(255, 255, 255, 0.4);
 	border-radius: 50%;
 }
-.acc__frendBonus .avatar {
+.avatar {
+	border-radius: 50%;
 	height: 2.625em;
 	width: 2.625em;
 }
