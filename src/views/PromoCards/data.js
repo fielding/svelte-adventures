@@ -1,4 +1,5 @@
 import FriendBonus from '~/views/FriendBonus/FriendBonus.svelte';
+import Achievements from '~/views/Achievements/Achievements.svelte';
 
 const promoInfo = [
 	{
@@ -20,10 +21,10 @@ const promoInfo = [
 		screen: 'Onboarding1',
 	},
 	{
-		name: 'rewards',
+		name: 'achievements',
 		title: 'Unlock Trophies',
 		body: 'Complete milestones and start earning VidyCoin!',
-		screen: 'Rewards',
+		screen: Achievements,
 	},
 ];
 
