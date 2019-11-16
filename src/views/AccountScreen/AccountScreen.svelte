@@ -1,5 +1,5 @@
 <script>
-export let swipeable = false;
+	export let swipeable = false;
 </script>
 
 <div class="screen" class:swipeable>
