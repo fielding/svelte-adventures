@@ -116,5 +116,5 @@
 	{/if}
 </div>
 
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" src="styles.scss"></style>
 
