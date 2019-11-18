@@ -1,5 +1,5 @@
 <script>
-	import { beforeUpdate, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { mainScreen, mainTarget, stackedScreen, currentScreen, navigate } from '~/views/Account/store.js';
 	import Settings from '~/views/Settings/Settings.svelte';
 	import Achievements from '~/views/Achievements/Achievements.svelte';
@@ -11,7 +11,7 @@
 
 <nav>
 	<div class="left">
-		<button type="button" class={$currentScreen === 'Achievements' ? 'selected' : '' } on:click={() => navigate(Achievements)}>
+		<button type="button" class:selected={$currentScreen === 'Achievements'} on:click={() => navigate(Achievements)}>
 			<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 				<path clip-rule="evenodd" fill-rule="evenodd" d="m14.3034 43.0513c-.9369 2.4701-.3173 4.9487-.3173 4.9487h19.6923s.6196-2.4786-.3173-4.9487c-4.0818-.2336-5.3455-2.0453-5.7051-4.5059-1.0816-.2497-2.3463-.3916-3.8237-.3916-1.4776 0-2.7423.1419-3.8239.3916-.3596 2.4606-1.6233 4.2723-5.705 4.5059zm9.5289-7.359c22.8074.0943 17.2307-35.6923 17.2307-35.6923h-34.4615s-5.57669 35.598 17.2308 35.6923zm1.4932-21.8263-1.5712-3.241-1.5712 3.241-3.5691.4929 2.5976 2.4958-.6344 3.5455 3.1771-1.6989 3.1767 1.6989-.6339-3.5455 2.5975-2.4958z" />
 			</svg>
@@ -36,7 +36,7 @@
 		<div class:wallet class:profile class:streaks class="indicator" />
 	</div>
 	<div class="right">
-		<button type="button" class={$currentScreen === 'Settings' ? 'selected' : '' } on:click={(e) => navigate(Settings)}>
+		<button type="button" class:selected={$currentScreen === 'Settings'} on:click={() => navigate(Settings)}>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 				<g clip-path="url(#clip0)">
 					<path fill-rule="evenodd" d="M19.4111 0l3.3134 4.56933h2.4788L28.6327 0s3.126.574562 4.9279 1.41221c1.802.83765 4.1767 2.32145 4.1767 2.32145l-.933 5.75113 1.7373 1.70681c1.8981-.2899 5.6943-.8566 5.6943-.8051 0 .004.0268.0391.0754.1025.3116.4075 1.5185 1.9854 2.2609 4.0327C47.4303 16.8878 48 19.3391 48 19.3391l-4.6327 3.4135v2.4475L48 28.5815s-.5728 2.9137-1.2552 4.467c-.6823 1.5533-2.541 4.6466-2.541 4.6466l-5.6622-.8695-1.8016 1.6746.9651 5.7322s-2.3889 1.4525-4.1243 2.2276c-1.7353.7751-4.9481 1.5402-4.9481 1.5402l-3.4242-4.7244-2.3881.0414-3.4209 4.683s-2.9894-.6289-4.8558-1.4595c-1.8664-.8305-4.2809-2.3405-4.2809-2.3405l.9328-5.7644-1.80157-1.7068-5.59765.9339s-1.68534-2.5643-2.48675-4.5217C.508232 31.1839 0 28.6137 0 28.6137l4.66494-3.4458v-2.4557L0 19.2425s.574317-2.708 1.68098-5.276c1.10667-2.568 2.11533-3.741 2.11533-3.741l5.59772.9017 1.76037-1.67729-.8731-5.71625s2.4187-1.5636 4.6739-2.51495C17.2104.267363 19.4111 0 19.4111 0zm4.5484 35.45c5.813 0 10.5254-4.7171 10.5254-10.5358 0-5.8188-4.7124-10.5359-10.5254-10.5359s-10.5254 4.7171-10.5254 10.5359c0 5.8187 4.7124 10.5358 10.5254 10.5358z" clip-rule="evenodd"/>
