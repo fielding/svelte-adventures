@@ -1,4 +1,4 @@
-import { get, writable, derived} from 'svelte/store';
+import { get, writable, derived } from 'svelte/store';
 
 export const stackedScreen = writable(null);
 export const mainScreen = writable('Profile');
@@ -15,10 +15,10 @@ export const currentScreen = derived([mainScreen, stackedScreen], ([$mainScreen,
 export const navigate = screen => {
 	let target = get(mainTarget);
 	if (typeof screen === 'function') {
-			mainScreen.update(mainScreen => target !== null ? target : mainScreen);
-			stackedScreen.update(stackedScreen => stackedScreen === screen ? null : screen);
-		} else if (typeof screen === 'string') {
-			mainTarget.set(screen);
-			stackedScreen.set(null);
-		}
-	};
+		mainScreen.update(mainScreen => target !== null ? target : mainScreen);
+		stackedScreen.update(stackedScreen => stackedScreen === screen ? null : screen);
+	} else if (typeof screen === 'string') {
+		mainTarget.set(screen);
+		stackedScreen.set(null);
+	}
+};
