@@ -1,6 +1,6 @@
 import FriendBonus from '~/views/FriendBonus/FriendBonus.svelte';
 import Lottery from '~/views/Lottery/Lottery.svelte';
-// import Onboarding from '~/views/Onboarding/Onboarding.svelte';
+import Onboarding from '~/views/Onboarding/Onboarding.svelte';
 import Achievements from '~/views/Achievements/Achievements.svelte';
 
 const promoInfo = [
@@ -20,7 +20,7 @@ const promoInfo = [
 		name: 'promo__onboarding',
 		title: 'Earn 50 VidyCoin',
 		body: 'Finish onboarding and earn 50 VidyCoin!',
-		screen: 'Onboarding',
+		screen: Onboarding,
 	},
 	{
 		name: 'achievements',
