@@ -31,6 +31,7 @@
 		right: 0;
 		margin: 4.5em 1.1875em 0 1.1875em; /* 72px auto 0 auto @ font-size 16px */
 		position: relative;
+		color: #2b2b2b;
 	}
 
 	.chartContainer {

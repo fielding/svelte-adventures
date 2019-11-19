@@ -9,13 +9,14 @@
 
 <style>
 	.screen {
+		color: #ffffff;
 		flex: 1 1 374px;
-		scroll-snap-align: center;
+		height: 100%;
 		max-width: 374px;
 		min-width: 100%;
-		text-align: center;
 		position: absolute;
-		height: 100%;
+		scroll-snap-align: center;
+		text-align: center;
 	}
 
 	.swipeable {
