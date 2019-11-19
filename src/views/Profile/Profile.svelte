@@ -1,5 +1,6 @@
 <script>
 	import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
+	import AreaChart from '~/views/AreaChart/AreaChart.svelte';
 	import Balance from '~/views/Balance/Balance.svelte';
 	import Change from '~/views/Change/Change.svelte';
 	import PromoCards from '~/views/PromoCards/PromoCards.svelte';
@@ -11,6 +12,9 @@
 		<img class="avatar" alt="User's Avatar" src="https://i.imgur.com/OjaHwMY.png" >
 		<Balance />
 		<Change />
+		<div class="chartContainer">
+			<AreaChart maxHeight="7.5em" />
+		</div>
 	</div>
 	<PromoCards />
 </AccountScreen>
@@ -26,6 +30,17 @@
 		left: 0;
 		right: 0;
 		margin: 4.5em 1.1875em 0 1.1875em; /* 72px auto 0 auto @ font-size 16px */
+		position: relative;
+	}
+
+	.chartContainer {
+		border-bottom-left-radius: .5em;
+		border-bottom-right-radius: .5em;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
 	}
 
 	.avatar {
