@@ -1,6 +1,6 @@
 <script>
 	import AccountScreen from '~/views/AccountScreen/AccountScreen.svelte';
-	import AreaChart from '~/views/AreaChart/AreaChart.svelte';
+	import AreaChart from '~/components/AreaChart/AreaChart.svelte';
 	import Balance from '~/views/Balance/Balance.svelte';
 	import Change from '~/views/Change/Change.svelte';
 	import PromoCards from '~/views/PromoCards/PromoCards.svelte';
