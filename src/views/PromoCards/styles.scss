@@ -4,7 +4,7 @@
 }
 
 .cards {
-	max-width: 21em;
+	max-width: 336px;
 	position: relative;
 	margin: .625em 1.1875em 0 1.1875em; /* 10px 19px 0 19px @ font-size 16 */
 	overflow-y: hidden;
@@ -16,7 +16,12 @@
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
+
 
 button {
 	position: absolute;
