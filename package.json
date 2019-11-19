@@ -30,7 +30,9 @@
     "typescript": "^3.7.0",
     "vue-eslint-parser": "^7.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bignumber.js": "^9.0.0"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
