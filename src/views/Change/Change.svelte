@@ -1,7 +1,8 @@
 <script>
+export let fontSize = "1em";
 </script>
 
-<div class="change">
+<div class="change" style={`font-size: ${fontSize}`}>
 	<em>0% (0%)</em>
 	<span>today</span>
 </div>
@@ -21,6 +22,6 @@
 	}
 
 	span {
-		font-size: .625em /* 10px */
+		font-size: .625em; /* 10px */
 	}
 </style>
