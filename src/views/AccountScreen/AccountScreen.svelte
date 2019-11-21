@@ -9,7 +9,7 @@
 
 <style>
 	.screen {
-		color: #ffffff;
+		color: #f2f2f2;
 		flex: 1 1 374px;
 		height: 100%;
 		max-width: 374px;
