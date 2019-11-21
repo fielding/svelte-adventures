@@ -10,7 +10,9 @@
 	<h2 slot="title" class="title">@fielding</h2>
 	<div class="card">
 		<img class="avatar" alt="User's Avatar" src="https://i.imgur.com/OjaHwMY.png" >
-		<Balance />
+		<div class="balance">
+			<Balance />
+		</div>
 		<Change />
 		<div class="chartContainer">
 			<AreaChart maxHeight="7.5em" />
