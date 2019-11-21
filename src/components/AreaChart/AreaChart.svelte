@@ -44,30 +44,4 @@
 	</svg	>
 </div>
 
-
-<style>
-	div {
-		height: 100%;
-		width: 100%;
-
-	}
-	svg {
-		width: 100%;
-		overflow: visible;
-		position: relative;
-	}
-
-	.line {
-		fill: none;
-		stroke: #ff3dac;
-		stroke-linejoin: round;
-		stroke-linecap: round;
-		stroke-width: 1;
-	}
-
-	.area {
-		fill: #ff3dac;
-	}
-
-
-</style>
+<style lang="stylus" src="styles.styl"></style>
