@@ -1,3 +1,4 @@
+// TODO: actually utilize typescript here
 // Mimic scrollTo with `scroll-behavior: smooth` for browsers with out support for `scroll-behavior`.
 // (IE, safari and safari mobile).
 export function smoothHorizontalScroll(element, xDelta) {

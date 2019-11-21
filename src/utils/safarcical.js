@@ -1,5 +1,6 @@
 /**
  * @fileoverview utility functions to tame mobile safari's farcical behavior
+ * TODO: convert to typescript
  */
 
 const styleNames = ['height', 'overflow-y', '-webkit-overflow-scrolling'];
