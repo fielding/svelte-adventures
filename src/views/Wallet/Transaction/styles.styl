@@ -1,0 +1,60 @@
+.transaction
+	display flex
+	margin-bottom 1.5em
+	justify-content space-between
+	cursor pointer
+	position relative
+	color #2b2b2b
+
+.avatar
+	height 2.5em
+	width 2.5em
+	border-radius 50%
+	flex-grow 0
+
+.amount
+	flex-grow 1
+	font-size 1.125em
+	font-weight 700
+	color #2b2b2b
+	text-align right
+	display flex
+	justify-content flex-end
+	align-items baseline
+
+	&.received
+		color #22CDC4
+
+		span
+			color #22CDC4
+
+	span
+		color #2b2b2b
+		font-size .7778em
+
+
+.info
+	display flex
+	flex-direction column
+	flex-grow 0
+	margin-left .5625em
+	text-align left
+	justify-content space-evenly
+
+.secondParty
+	font-size .875em
+	line-heightr 1.286
+	font-weight 600
+	margin-right .4545454545em
+
+.streakCount
+	font-size .6875em
+	font-weight 600
+
+	&:after
+		content '🔥'
+		font-size .8181818182em
+
+.time
+	font-size .6875em
+	font-weight 600

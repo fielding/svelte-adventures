@@ -1,0 +1,29 @@
+ul,
+li
+	padding 0
+	z-index 1
+
+ul
+	display flex
+	justify-content space-evenly
+	list-style-type none
+	margin 1em 0 1em 0 // 16px 0 16px 0 @ font-size 16px
+	top 100%
+
+li
+	margin 0
+	font-size 0.813em // 13px @ 16px
+	font-weight 700
+	color #fff
+	flex-grow 1
+	cursor pointer
+
+.content
+	position relative
+
+.active
+	color #ff3dac
+	.content
+		text-decoration underline
+
+
