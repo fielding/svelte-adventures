@@ -32,7 +32,8 @@
     "vue-eslint-parser": "^7.0.0"
   },
   "dependencies": {
-    "bignumber.js": "^9.0.0"
+    "bignumber.js": "^9.0.0",
+    "fromnow": "^3.0.1"
   },
   "scripts": {
     "build": "rollup -c",
