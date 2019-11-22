@@ -10,3 +10,11 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 }
+
+:global(.unstyledButton) {
+	all: inherit;
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
