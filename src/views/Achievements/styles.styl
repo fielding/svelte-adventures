@@ -1,0 +1,50 @@
+h5
+	margin 0
+	color #ffffff
+	font-size 0.6875em
+
+.title
+	font-weight 500
+	font-size 1.125em /* 18px with parent font-size 16px */
+	color #ffffff
+	text-transform initial
+	margin-top 1em /* same as this elements font-size */
+	margin-bottom 1em
+
+.grid
+	display grid
+	grid-template-columns 1fr 1fr 1fr 1fr
+	grid-template-rows auto
+	grid-gap 3.25em
+	padding 2.4375em 3.25em
+	justify-items center
+
+	svg
+		width 1.625em
+		height 1.625em
+		fill #ffffff
+		//garretstan .balance
+		position relative
+		z-index 1
+		pointer-events none
+
+.gloriousNationGarrettstan
+	height 630px
+	display flex
+	justify-content center
+	align-items center
+	position absolute
+	top 0
+
+	img
+		width 100%
+		filter sepia(0.66)
+		opacity 0.66
+		transition opacity 0.7s ease, filter 0.7s ease
+
+		&:hover
+			filter unset
+			opacity 1
+
+
+

@@ -2,7 +2,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { smoothHorizontalScroll } from '../../utils/dom.ts';
 	import { iOS, TOUCHES } from '../../constants/device.ts';
-	import PromoCard from './PromoCard.svelte';
+	import PromoCard from './PromoCard/PromoCard.svelte';
 	import promoInfo from './data.js';
 	import { current } from './store.js';
 
@@ -116,5 +116,5 @@
 	{/if}
 </div>
 
-<style lang="scss" src="styles.scss"></style>
+<style lang="stylus" src="styles.styl"></style>
 

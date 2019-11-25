@@ -92,4 +92,4 @@
 	</div>
 </AccountScreen>
 
-<style lang="scss" src="styles.scss"></style>
+<style lang="stylus" src="styles.styl"></style>

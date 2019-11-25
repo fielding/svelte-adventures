@@ -1,0 +1,97 @@
+nav
+  display flex
+  align-items center
+  padding 0 1.25em 0 1.25em /* 0 20px 0 20px @ font-size 16px */
+  position absolute
+  bottom 0
+  width 100%
+  z-index 2 /* pointer-events auto; */
+
+.left
+  flex-grow 2.5
+
+.pill
+  background-color #F3F4F8
+  border-radius 19px
+  display flex
+  padding 0
+  align-items center
+  height 2.375em /* 38px @ font-size 16px */
+  z-index 0
+  justify-content center
+
+.pill button
+  margin-top 0
+  margin-bottom 0
+
+.right
+  display flex
+  justify-content flex-end
+  flex-grow 2.5
+
+button
+  z-index 2
+  width 2.875em /* 46px @ font-size 16px */
+  height 2.375em /* 38px @ font-size 16px */
+  display flex
+  align-items center
+  justify-content inherit
+  font-size inherit
+  cursor pointer
+  padding 0
+  margin 1em 0
+  border none
+  background-color transparent
+  transition opacity .35s
+  touch-action manipulation
+
+@media (hover:hover)
+  button:hover
+    opacity .5
+
+buttonactive
+  color transparent
+  background-color transparent
+
+button *
+  touch-action manipulation
+  display inline-block
+
+svg
+  height 1.25em
+  width 1.25em
+  fill #b9b9b9
+  transition fill .468s ease
+
+.current svg
+  fill #6D6D6D
+
+.selected svg
+  fill #FF3DAC
+
+div.indicator
+  width 2.875em /* 46px @ font-size 16px */
+  height 2.375em /* 38px @ font-size 16px */
+  z-index 2
+  position absolute
+  background-color #ffffff
+  border-radius 50%
+  box-shadow 0px 4px 16px rgba(0, 0, 0, 0.25)
+  z-index 1
+  margin-top 0
+  margin-bottom 0
+  transition transform .468s ease
+
+div.wallet
+  -webkit-transform translateX(-100%)
+  transform translateX(-100%)
+
+div.profile
+  -webkit-transform translateX(0%)
+  transform translateX(0%)
+
+div.streaks
+  -webkit-transform translateX(100%)
+  transform translateX(100%)
+
+

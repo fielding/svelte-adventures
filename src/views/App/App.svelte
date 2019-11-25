@@ -4,7 +4,7 @@
 
 <Account/>
 
-<style lang="scss" src="styles.scss">
+<style lang="stylus" src="styles.styl">
 </style>
 
 

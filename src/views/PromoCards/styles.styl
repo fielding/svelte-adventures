@@ -1,0 +1,49 @@
+.promoCards
+  display flex
+  position relative
+
+.cards
+  max-width 336px
+  position relative
+  margin .625em 1.1875em 0 1.1875em /* 10px 19px 0 19px @ font-size 16 */
+  overflow-y hidden
+  overflow-x scroll
+  display flex
+  -webkit-overflow-scrolling touch
+  scroll-snap-type mandatory /* repeated below on purpose, this is to support legacy scroll snap api */
+  -ms-scroll-snap-type x mandatory
+  scroll-snap-type x mandatory
+  scrollbar-width none
+  -ms-overflow-style none
+
+.cards::-webkit-scrollbar
+  display none
+
+button
+  position absolute
+  z-index 1
+  width 2em
+  height 5.375em
+  margin-top 0.625em
+  font-size 1em
+  background-color transparent
+  border none
+  padding 0
+
+buttonfocus
+  outline none
+
+buttonhover svg
+  transform scale(1.666)
+
+button svg
+  fill #FFFFFF
+  height .75em
+  width .75em
+  transition transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+
+.prev
+  left 1.1875em
+
+.next
+  right 1.1875em
